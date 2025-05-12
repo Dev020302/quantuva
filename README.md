@@ -150,12 +150,24 @@ http://localhost:8080/api/tickets/1/assign
 
 ### Add a reply to a ticket
 
-```bash
+```
 Method : POST
 http://localhost:8080/api/tickets/1/replies?userId=2 
   {
     "message": "I am looking into this issue, will get back to you shortly."
   }
+```
+
+### Update Ticket Status by admin
+
+```
+Method : POST
+http://localhost:8080/api/tickets/1/status
+  {
+    "status": "IN_PROGRESS"
+  }
+
+#You can also use "RESOLVED" or "OPEN" as status.
 ```
 
 ## User Flow
